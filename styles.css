@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	font-size: 100%;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 400;
+	min-height: 100vh;
+}
+
+.slider__navbar {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	z-index: 999;
+}
+
+.slider__navbar .slider--nav {
+	display: block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin: 20px 0;
+	text-indent: -9999px;
+	box-shadow: none;
+	border: none;
+	background: rgba(0,0,0,0.2);
+}
+
+.slider__navbar .slider--nav.active {
+	background: rgba(255,255,255,1);
+}
+
+.flex__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-flow: row wrap; 
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+
+.flex--html .flex__item--left {
+	background: #f66b3a;
+}
+
+.flex--html .flex__item--right {
+	background: #ffebcd;
+}
+
+.flex--css .flex__item--left {
+	background: #16a1dc;
+}
+
+.flex--css .flex__item--right {
+	background: #d3eaef;
+}
+
+.flex--js .flex__item--left {
+	background: #ffde24;
+}
+
+.flex--js .flex__item--right {
+	background: #f4ecc5;
+}
+
+.flex__item--left {
+	display: flex;
+	align-items: center;
+	width: 65%;
+	transform-origin: left bottom;
+	transition: transform 0.1s linear 0.4s;
+	opacity: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.flex__item--right {
+	width: 35%;
+	transform-origin: right center;
+	transition: transform 0.1s linear 0.4s;
+	opacity: 0;
+}
+
+.flex__content {
+	margin-left: 80px;
+	width: 55%;
+	opacity: 1;
+	transition: transform 0.2s linear 0.2s;
+}
+
+.text--sub {
+	font-size: 12px;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.text--tittle {
+	font-size: 7.5em;
+	font-weight: 700;
+	line-height: 110px;
+  	margin-left: -8px;
+}
+
+.text--normal {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 22px;
+	margin-top: 25px;
+}
+
+.text__background {
+	position: absolute;
+	left: 72px;
+	bottom: -60px;
+	color: rgba(0,0,0,0.05);
+	font-size: 170px;
+	font-weight: 700;
+}
+
+.flex__item {
+	height: 100vh;
+	color: #fff;
+	transition: transform 0.2s linear 0.2s;
+}
+
+.language__img {
+	position: absolute;
+	bottom: 20px;
+	right: 15%;
+	max-height: 40vw;
+	opacity: 1;
+	transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
+
+.flex--preStart .flex__item--left,
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+	opacity: 1;
+}
+
+/* Animate-START point */
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+.flex__container.animate--start .language__img {
+	transform: translate3d(-200px,0,0);
+	opacity: 0;
+}
+
+/* Animate-END point */
+
+.flex__container.animate--end .flex__item--left {
+	transform: scaleY(0);
+}
+
+.flex__container.animate--end .flex__item--right {
+	transform: scaleX(0);
+}
+
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+}
+
+.flex__container.animate--end .language__img {
+	transform: translate3d(200px,0,0);
+	opacity: 0;
+}
+
+.floating__link {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 9999;
+  }
+  
+  .floating__link a {
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 18px;
+	text-decoration: none;
+	transition: all 0.5s;
+  }
+
+  .floating__link a:hover {
+	color: #000;
+  }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="slider__container">
+
+        <section class="flex__container flex--html flex--active" data-slide="1">
+            <div class="flex__item flex__item--left">
+                <div class="flex__content">
+                    <p class="text--sub">markup language</p>
+                    <h1 class="text--tittle">HTML</h1>
+                    <p class="text--normal">HTML (HyperText Markup Language) is a markup language used for creating web
+                        content. It consists of a series of tags that are used to structure and format the content of a
+                        web page. Tags allow you to add text, images, videos, links and other elements to a web page and
+                        define its appearance. They are also used to create interactive forms and to add metadata that
+                        helps search engines index and find content. HTML code is written in plain text files and
+                        interpreted by the web browser to display the web page to the user.</p>
+                </div>
+                <p class="text__background">HTML</p>
+            </div>
+            <div class="flex__item flex__item--right"></div>
+            <img class="language__img" src="img/html.png" />
+        </section>
+
+        <section class="flex__container flex--css animate--start" data-slide="2">
+            <div class="flex__item flex__item--left">
+                <div class="flex__content">
+                    <p class="text--sub">style sheets</p>
+                    <h1 class="text--tittle">CSS</h1>
+                    <p class="text--normal">CSS (Cascading Style Sheets) is a style sheet language used to describe how
+                        HTML content is displayed. With CSS, designers can control the look and layout of a web page,
+                        including colors, fonts, box layouts, effects and more. CSS is used in conjunction with HTML and
+                        JavaScript to create interactive and engaging web pages.</p>
+                </div>
+                <p class="text__background">CSS</p>
+            </div>
+            <div class="flex__item flex__item--right"></div>
+            <img class="language__img" src="img/css.png" />
+        </section>
+
+        <section class="flex__container flex--js animate--start" data-slide="3">
+            <div class="flex__item flex__item--left">
+                <div class="flex__content">
+                    <p class="text--sub">programming language</p>
+                    <h1 class="text--tittle">JavaScript</h1>
+                    <p class="text--normal">JavaScript is a programming language used in the creation of dynamic and
+                        interactive websites. It allows you to create visual effects, validate forms, interact in real
+                        time and much more. It is an interpreted language and can be used both client-side and
+                        server-side. It is also used in desktop, mobile and IoT applications. It is a high-level
+                        language and its syntax resembles that of other languages such as C or Java. It runs in all
+                        modern browsers without the need to install plugins or additional programs.</p>
+                </div>
+                <p class="text__background">JavaScript</p>
+            </div>
+            <div class="flex__item flex__item--right"></div>
+            <img class="language__img" src="img/js.png" />
+        </section>
+
+    </main>
+
+    <nav class="slider__navbar">
+        <a href="#" class="slider--nav active" data-slide="1">HTML</a>
+        <a href="#" class="slider--nav" data-slide="2">CSS</a>
+        <a href="#" class="slider--nav" data-slide="3">JS</a>
+    </nav>
+
+    <div class="floating__link">
+        <a target="_blank" href="https://www.youtube.com/@juandavid_dev">YouTube Chanel @juandavid_dev</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
